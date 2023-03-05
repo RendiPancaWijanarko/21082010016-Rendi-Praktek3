@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>Kalkulator Sederhana</title>
+    <link rel="stylesheet" href="DesainWebRendi.css">
+    <script>
+      function tambah() {
+        // Ambil nilai bilangan dari input text
+        var bilangan1 = document.getElementById("bilangan1").value;
+        var bilangan2 = document.getElementById("bilangan2").value;
+
+        // Konversi string ke angka
+        bilangan1 = parseFloat(bilangan1);
+        bilangan2 = parseFloat(bilangan2);
+
+        // Lakukan operasi tambah
+        var hasil = bilangan1 + bilangan2;
+
+        // Tampilkan hasil pada input text
+        document.getElementById("hasil").value = hasil;
+      }
+
+      function kurang() {
+        // Ambil nilai bilangan dari input text
+        var bilangan1 = document.getElementById("bilangan1").value;
+        var bilangan2 = document.getElementById("bilangan2").value;
+
+        // Konversi string ke angka
+        bilangan1 = parseFloat(bilangan1);
+        bilangan2 = parseFloat(bilangan2);
+
+        // Lakukan operasi kurang
+        var hasil = bilangan1 - bilangan2;
+
+        // Tampilkan hasil pada input text
+        document.getElementById("hasil").value = hasil;
+      }
+
+      function kali() {
+        // Ambil nilai bilangan dari input text
+        var bilangan1 = document.getElementById("bilangan1").value;
+        var bilangan2 = document.getElementById("bilangan2").value;
+
+        // Konversi string ke angka
+        bilangan1 = parseFloat(bilangan1);
+        bilangan2 = parseFloat(bilangan2);
+
+        // Lakukan operasi kali
+        var hasil = bilangan1 * bilangan2;
+
+        // Tampilkan hasil pada input text
+        document.getElementById("hasil").value = hasil;
+      }
+
+      function bagi() {
+        // Ambil nilai bilangan dari input text
+        var bilangan1 = document.getElementById("bilangan1").value;
+        var bilangan2 = document.getElementById("bilangan2").value;
+
+        // Konversi string ke angka
+        bilangan1 = parseFloat(bilangan1);
+        bilangan2 = parseFloat(bilangan2);
+
+        // Lakukan operasi bagi
+        var hasil = bilangan1 / bilangan2;
+
+        // Tampilkan hasil pada input text
+        document.getElementById("hasil").value = hasil;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Kalkulator Sederhana</h1>
+
+    <label for="bilangan1">Bilangan 1:</label>
+    <input type="text" id="bilangan1" />
+
+    <br /><br />
+
+    <label for="bilangan2">Bilangan 2:</label>
+    <input type="text" id="bilangan2" />
+
+    <br /><br />
+
+    <button onclick="tambah()">+</button>
+    <button onclick="kurang()">-</button>
+    <button onclick="kali()">x</button>
+    <button onclick="bagi()">/</button>
+
+    <br /><br />
+
+    <label for="hasil">Hasil:</label>
+    <input type="text" id="hasil" />
+
+    <script language="JavaScript">
+      document.write(
+        "Dimodifikasi terakhir pada " + document.lastModified
+      );
+    </script>
+  </body>
+</html>

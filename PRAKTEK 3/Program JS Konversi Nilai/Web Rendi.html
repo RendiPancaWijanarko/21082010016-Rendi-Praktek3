@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Konversi Nilai Angka ke Huruf</title>
+    <link rel="stylesheet" href="DesainWebRendi.css">
+  </head>
+  <body>
+
+  <div id="KonversiNilai">
+    <div class="Header">
+      <h1>Konversi Nilai Angka ke Huruf</h1>
+    </div>
+    <div class="perubahan">
+        <label for="nilai">Masukkan nilai angka:</label>
+        <input type="text" id="nilai">
+        <button onclick="konversi()">Konversi</button>
+        <p id="hasil"></p>
+        <script>
+          function konversi() {
+            var nilai = parseInt(document.getElementById("nilai").value);
+            var huruf;
+
+            if (nilai >= 0 && nilai <= 40) {
+              huruf = "E";
+            } else if (nilai >= 41 && nilai <= 55) {
+              huruf = "D";
+            } else if (nilai >= 56 && nilai <= 60) {
+              huruf = "C";
+            } else if (nilai >= 61 && nilai <= 65) {
+              huruf = "BC";
+            } else if (nilai >= 66 && nilai <= 70) {
+              huruf = "B";
+            } else if (nilai >= 71 && nilai <= 80) {
+              huruf = "AB";
+            } else if (nilai >= 81 && nilai <= 100) {
+              huruf = "A";
+            } else if (nilai = " ") {
+              huruf = "Harap isi nilai 0 - 100!";
+            } else {
+              huruf = "Nilai tidak valid";
+            }
+
+            document.getElementById("hasil").innerHTML = "Nilai huruf: " + huruf;
+          }
+        </script>
+        </div>
+  </div>
+
+  </body>
+</html>
